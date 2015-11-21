@@ -2,7 +2,7 @@
 
 Hello Primers!
 
-Welcome to your second weekend challenge!
+Welcome to your second weekend challenge! (Yes, you need to use Handlebars!!!!)
 
 ## Working with Node
 
