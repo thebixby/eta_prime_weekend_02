@@ -1,14 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <head lang="en">
-        <meta charset="UTF-8">
-        <title></title>
-        <link rel="stylesheet" href="/styles/style.css">
-	<script type="text/javascript" src="/vendors/jquery.min.js"></script>
-	<script type="text/javascript" src="/vendors/handlebars.min.js"></script>
-        <script type="text/javascript" src="/scripts/app.js"></script>
-    </head>
-    <body>
-    </body>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Humans of Eta</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <script type="text/javascript" src="/vendors/jquery.min.js"></script>
+    <script type="text/javascript" src="/vendors/handlebars.min.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Humans of Eta</h1>
+        <header class="eta-name">
+    </div>
+    </header>
+    <div class="student">
+        <div class="student-name">
+            <h2>Lesser Panda</h2>
+        </div>
+        <div class="fav-movies">
+            <h3 class="fav-head">Favorite Movies</h3>
+            <ul class="movies">
+                <li class="movie">Red Panda</li>
+                <li class="movie">Red Panda 2</li>
+                <li class="movie">Penguin Action Squad: The Movie</li>
+            </ul>
+        </div>
+        <div class="left-side">
+            <input class="left-arrow" type="image" src="/images/leftarrow.png" width="100" height="100" />
+            <p class="previous">Grizzly Bear</p>
+        </div>
+        <div class="right-side">
+            <input class="right-arrow" type="image" src="/images/rightarrow.png" width="100" height="100" />
+            <p class="next">Full-Time Panda</p>
+        </div>
+    </div>
+</body>
+
+
+<script id="student-list" type="text/x-handlebars-template">
+   {{#each this}}
+
+
+    {{/each}}
+</script>
 
 </html>

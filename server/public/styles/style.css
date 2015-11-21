@@ -1,0 +1,39 @@
+.header {
+
+	
+}
+
+.student-name {
+
+
+}
+
+.fav-movies {
+	
+}
+
+ .movies {
+
+
+}
+
+.movie {
+	list-style-type: none;
+/*	margin: auto;*/
+	padding: 10px;
+	display: inline;
+	font-weight: bold;
+}
+
+.left-side {
+	float: left;
+}
+
+.right-side {
+	float: right;
+}
+
+.left-side, .right-side {
+	font-weight: bold;
+	font-size: 12px;
+}
