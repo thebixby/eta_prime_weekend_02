@@ -38,7 +38,7 @@ function makeStudentArrayFromJSON(json) {
 	return cohort;
 }
 
-function retreiveCurrentStudent(studentsArray, currentIndex) {
+function retrieveCurrentStudent(studentsArray, currentIndex) {
 
 	return studentsArray[currentIndex];
 }
@@ -65,17 +65,69 @@ function displayStudent($element) {
 
 
 
+var cohort = [];
+var index = 0;
+function back() {
+    index = ( cohort.length + index - 1) % cohort.length;
+    console.log("backwards ", index);
+}
+
+function forward() {
+    index = (index + 1) % cohort.length;
+    console.log("forward ", index);
+
+}
 $(document).ready(function() {
+
+    $('.left-arrow').on('click', function() {
+        back();
+        console.log("Working just fine");
+        var currentStudent = retrieveCurrentStudent(cohort, index);
+
+        //get the html for the template
+        var theTemplateScript = $('#student-list').html();
+
+        //get the template function from Handlebars.compile(the html)
+        var theTemplateFunction = Handlebars.compile (theTemplateScript);
+
+
+        //get the HTML for our current student
+        $('.who-dis').html (theTemplateFunction(currentStudent));
+
+
+    });
+
+    $('.right-arrow').on('click', function() {
+        forward();
+        var currentStudent = retrieveCurrentStudent(cohort, index);
+
+        //get the html for the template
+        var theTemplateScript = $('#student-list').html();
+
+        //get the template function from Handlebars.compile(the html)
+        var theTemplateFunction = Handlebars.compile (theTemplateScript);
+
+
+        //get the HTML for our current student
+        $('.who-dis').html (theTemplateFunction(currentStudent));
+
+    });
+
+
+
+
+
+
 	$.ajax({
 			url: 'data/eta.json'
 		})
 		.done(function(json) {
 
 
-			var cohort = makeStudentArrayFromJSON(json);
-			var currentStudent = retreiveCurrentStudent(cohort, 6);
+			cohort = makeStudentArrayFromJSON(json);
 
-debugger;
+			var currentStudent = retrieveCurrentStudent(cohort, index);
+
 			//get the html for the template
 			var theTemplateScript = $('#student-list').html();
 
