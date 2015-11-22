@@ -147,7 +147,7 @@
         {
             "firstName": "Charlotte",
             "lastName": "Kroening",
-            "favoriteFoods": "[spaghetti, Chinese food, strawberries, chocolate]",
+            "favoriteFoods": ["spaghetti", "Chinese food", "strawberries", "chocolate"],
             "hotLineBling": "false",
             "favoriteMovies": [{
                 "movieName":"Good Will Hunting",
