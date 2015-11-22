@@ -1,28 +1,49 @@
-.header {
+h1 {
+	margin: auto;
+	width: 80%;
+	border: 3px solid mediumslateblue;
+	padding: 10px;
+    text-align: center;
 
 	
 }
 
-.student-name {
+.who-dis {
+    margin: auto;
+    width: 70%;
+    height: 300px;
+    position: relative;
+    top: 50%;
+    transform: 			translateY(50%);
+
 
 
 }
 
+.student-name, .fav-head {
+    text-align: center;
+}
+
+.fav-head {
+    margin-top: 100px;
+}
 .fav-movies {
 	
 }
 
  .movies {
+     text-align: center;
+     padding-top: 50px;
 
 
 }
 
 .movie {
 	list-style-type: none;
-/*	margin: auto;*/
 	padding: 10px;
 	display: inline;
 	font-weight: bold;
+    border: 3px solid darkgreen;
 }
 
 .left-side {
