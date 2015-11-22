@@ -49,9 +49,12 @@
     <div class="fav-movies">
         <h3 class="fav-head">Favorite Movies</h3>
         <ul class="movies">
-            <li class="movie">Red Panda</li>
-            <li class="movie">Red Panda 2</li>
-            <li class="movie">Penguin Action Squad: The Movie</li>
+            {{#each favoriteMovies}}
+                <li class="movie">{{movieName}}</li>
+            {{/each}}
+            <!--<li class="movie">Red Panda</li>-->
+            <!--<li class="movie">Red Panda 2</li>-->
+            <!--<li class="movie">Penguin Action Squad: The Movie</li>-->
         </ul>
     </div>
 
