@@ -72,10 +72,19 @@ $(document).ready(function() {
 		.done(function(json) {
 
 
-debugger;
 			var cohort = makeStudentArrayFromJSON(json);
 			var currentStudent = retreiveCurrentStudent(cohort, 6);
-			debugger;
+
+debugger;
+			//get the html for the template
+			var theTemplateScript = $('#student-list').html();
+
+			//get the template function from Handlebars.compile(the html)
+			var theTemplateFunction = Handlebars.compile (theTemplateScript);
+
+
+			//get the HTML for our current student
+			$('.who-dis').html (theTemplateFunction(currentStudent));
 
 			console.log(makeStudentArrayFromJSON(json));
 		});
