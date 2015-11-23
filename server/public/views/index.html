@@ -20,13 +20,17 @@
     <div class="student-name">
         <h2></h2>
     </div>
+
     <div class="fav-movies">
         <h3 class="fav-head">Favorite Movies</h3>
         <ul class="movies">
+            <div class="fav-movie">
             <li class="movie">Red Panda</li>
             <li class="movie">Red Panda 2</li>
             <li class="movie">Penguin Action Squad: The Movie</li>
+            </div>
         </ul>
+
     </div>
 </div>
 <div class="left-side">
@@ -48,10 +52,12 @@
     </div>
     <div class="fav-movies">
         <h3 class="fav-head">Favorite Movies</h3>
+        <div class="fav-movie">
         <ul class="movies">
             {{#each favoriteMovies}}
                 <li class="movie">{{movieName}}</li>
             {{/each}}
+        </div>
             <!--<li class="movie">Red Panda</li>-->
             <!--<li class="movie">Red Panda 2</li>-->
             <!--<li class="movie">Penguin Action Squad: The Movie</li>-->

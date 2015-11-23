@@ -77,6 +77,15 @@ function forward() {
     console.log("forward ", index);
 
 }
+function drawButtons () {
+    var previousIndex = back();
+    var nextIndex = forward();
+    var previousPerson = cohort[previousIndex];
+    var nextPerson = cohort[nextIndex];
+    $('.previous').html(previousPerson.firstName + ' ' + previousPerson.lastName);
+    $('.next').html(nextPerson.firstName + ' ' + nextPerson.lastName);
+
+}
 $(document).ready(function () {
 
     $('.left-arrow').on('click', function () {
@@ -94,13 +103,15 @@ $(document).ready(function () {
         //get the HTML for our current student
         $('.who-dis').html (theTemplateFunction(currentStudent));
 
-        var previousIndex = back();
-        var nextIndex = forward();
+        drawButtons ();
 
-        var previousPerson = cohort[previousIndex];
-        var nextPerson = cohort[nextIndex];
-        $('.previous').html(previousPerson.firstName + ' ' + previousPerson.lastName);
-        $('.next').html(nextPerson.firstName + ' ' + nextPerson.lastName);
+        //var previousIndex = back();
+        //var nextIndex = forward();
+        //
+        //var previousPerson = cohort[previousIndex];
+        //var nextPerson = cohort[nextIndex];
+        //$('.previous').html(previousPerson.firstName + ' ' + previousPerson.lastName);
+        //$('.next').html(nextPerson.firstName + ' ' + nextPerson.lastName);
 
     });
 
@@ -118,12 +129,13 @@ $(document).ready(function () {
         //get the HTML for our current student
         $('.who-dis').html (theTemplateFunction(currentStudent));
 
-        var previousIndex = back();
-        var nextIndex = forward();
-        var previousPerson = cohort[previousIndex];
-        var nextPerson = cohort[nextIndex];
-        $('.previous').html(previousPerson.firstName + ' ' + previousPerson.lastName);
-        $('.next').html(nextPerson.firstName + ' ' + nextPerson.lastName);
+        drawButtons ();
+        //var previousIndex = back();
+        //var nextIndex = forward();
+        //var previousPerson = cohort[previousIndex];
+        //var nextPerson = cohort[nextIndex];
+        //$('.previous').html(previousPerson.firstName + ' ' + previousPerson.lastName);
+        //$('.next').html(nextPerson.firstName + ' ' + nextPerson.lastName);
 
     });
 
@@ -149,12 +161,13 @@ $(document).ready(function () {
             $('.who-dis').html (theTemplateFunction(currentStudent));
 
             console.log(makeStudentArrayFromJSON(json));
-            var previousIndex = back();
-            var nextIndex = forward();
-            var previousPerson = cohort[previousIndex];
-            var nextPerson = cohort[nextIndex];
-            $('.previous').html(previousPerson.firstName + ' ' + previousPerson.lastName);
-            $('.next').html(nextPerson.firstName + ' ' + nextPerson.lastName);
+            drawButtons ();
+            //var previousIndex = back();
+            //var nextIndex = forward();
+            //var previousPerson = cohort[previousIndex];
+            //var nextPerson = cohort[nextIndex];
+            //$('.previous').html(previousPerson.firstName + ' ' + previousPerson.lastName);
+            //$('.next').html(nextPerson.firstName + ' ' + nextPerson.lastName);
         });
     // body...
 });
